@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Alatsi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nobile&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+html{
+    background-color: #f8f8f9;
+    width:100%;
+    height: 100%;
+    margin: 0px;
+}
+
+body{
+    margin: 0;
+    background-color: white;
+    font-family: 'Nobile', sans-serif;
+    color:#464646;
+    width:100%;
+    height: 100%;
+
+}
+
+.alles{
+    min-height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items:stretch;
+}
+
+.content{
+    flex-grow: 1;
+}
+
+#logo{
+    width:100%;
+}
+#logo img{
+    width: 4rem;
+}
+
+nav {
+
+    width: 100%;
+    background: #ffcfc0;
+    border-bottom: #c10053b0 solid;
+    text-align: center;
+
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: none;
+    width: 100%;
+
+}
+
+.bar-hamburger{
+    display: inline-block;
+    text-align: right;
+    width: 100%;
+    color:black;
+    padding:10px 10%;
+    position: relative;
+    z-index: 10;
+
+
+}
+
+#hamburger-icon{
+    position: relative;
+    z-index:10;
+}
+
+.bar-hamburger::after{
+    content:'';
+    position: absolute;
+    top:0px;
+    left:0px;
+    height:100%;
+    width:100%;
+    background: #f0a993;
+    z-index: 5;
+}
+.fa{
+    float: left;
+}
+header nav ul li {
+    padding: 10px;
+    width: 100%;
+}
+
+
+
+
+header nav ul li a {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    padding:  10px 0px;
+    text-decoration: none;
+    color:#56001e;
+    font-family: 'Alatsi', sans-serif;
+
+}
+
+.hier{
+    background-color: #8faa3a;
+}
+.hier a{
+
+    color: whitesmoke !important;
+}
+
+
+footer {
+    background: #ffcfc0;
+    display: flex;
+    border-top: #c10053b0 solid;
+    flex-direction: column;
+    justify-content: center;
+    color:#56001e;
+    font-family: 'Alatsi', sans-serif;
+
+}
+
+footer p{
+    text-align: center;
+}
+
+.socialMedia{
+    text-align: center;
+    padding-bottom: 10px;
+    padding-right:5px;
+}
+
+
+footer .fab {
+    color: #56001e;
+}
+
+
+/*Home pagina*/
+.beschrijving{
+
+    padding: 1rem;
+
+
+
+}
+
+h2{
+    text-align: center;
+}
+
+
+
+
+/*Overzicht Pagina*/
+
+
+table {
+    width: 30%
+;margin: auto;
+}
+
+td, th {
+
+    padding: 8px;
+    text-align: center;
+
+}
+
+tr:nth-child(even) {
+    background-color:#8faa3a;
+}
+/*Voeg Toe*/
+.kiekBloem{
+    display: flex;
+    flex-flow: column;
+
+}
+form{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 1rem;
+}
+input[type=text][type=number], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+
+input[type=submit] {
+    background-color:#8faa3a;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+h1{
+    padding-left: 1rem;
+}
+#verzend{
+    margin-bottom: 1rem;
+}
+
+
+#cookie{
+    width: 90%;
+    padding:0 1rem;
+    text-align: justify;
+}
+
+@media only screen and (min-width: 600px) {
+    .bar-hamburger {
+        display: none;
+    }
+
+    #logo img{
+        width: 6rem;
+    }
+
+
+
+    nav {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        flex-wrap:wrap;
+    }
+
+    nav ul {
+        display: flex;
+        width: 50%;
+
+    }
+
+
+    nav ul li a{
+        font-size: 1rem;
+
+    }
+    .beschrijving{
+        font-size: 1.5rem;
+    }
+    table{
+        width: 50%;
+
+    }
+
+
+    form{
+        display: flex;
+        flex-flow: column;
+        width:45%;
+        padding:0rem 1rem 0rem 6rem;
+    }
+    h1{
+        padding-left: 1rem;
+    }
+
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+    .socialMedia{
+        width: 100%;
+    }
+    footer {
+        display: flex;
+        flex-direction: row;
+
+        justify-content: space-between;
+        align-items: center;
+        padding: 2px 10px;
+        font-size: 20px;
+    }
+}
+@media only screen and (min-width: 1100px) {
+    nav ul li a{
+        font-size: 1.5rem;
+
+    }
+}
+
